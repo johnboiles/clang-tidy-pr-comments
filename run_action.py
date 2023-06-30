@@ -241,6 +241,8 @@ def main():
                     replacement_lengths.append(replacement["Length"])
                     replacement_texts.append(replacement["ReplacementText"])
 
+                for path in file_paths:                
+                    print(f"{path} == {file_paths[0]}")
                 assert all(path == file_paths[0] for path in file_paths)
                 clang_tidy_diagnostics.append(
                     {
